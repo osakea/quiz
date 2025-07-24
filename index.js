@@ -16,9 +16,10 @@ class Quest{
     }
 
     display(){
-        for(let i = 0; i < this.answer_array.length; i += 1)
+        const random = this.answer_array.sort(()=> Math.random()-0.5)
+        for(let i = 0; i < random.length; i += 1)
             {
-                num[i].innerHTML = this.answer_array[i]
+                num[i].innerHTML = random[i]
         }
         question.innerHTML = this.quest
     }
