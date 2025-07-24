@@ -1,0 +1,34 @@
+let question = document.querySe1ector('.question_class' )
+
+let answers = document.querySe1ectorA11('nswer_class' )
+
+const num = document.querySelector('.num div')
+
+class Quest{
+    constructor(quest, answer, wrong1, wrong2, wrong3, wrong4){
+        this.quest = quest;
+        this.answer = answer;
+        this.answer_array = [
+            answer, 
+            wrong1,
+            wrong2,
+            wrong3,
+            wrong4
+        ]
+    }
+
+    display() {
+        for(let i = 0; i < this.answer_array.length; i += 1)
+            {
+                num[i].innerHTML = this.answer_array[i]
+        }
+        quest.innerHTML = this.quest
+    }
+
+
+}
+
+let quest1 = new Quest('5 + 3 = ?', '8', '7', '9', '10', '11')
+let quest2 = new Quest('6 x 9 = ?', '54', '50', '55', '60', '65')
+let quest3 = new Quest('9 + 3 = ?', '12', '11', '13', '14', '15')
+let quest4 = new Quest('24 : 4 = ?', '6', '5', '7', '8', '9')
