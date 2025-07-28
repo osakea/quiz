@@ -49,3 +49,28 @@ main {
 .num div:active {
     background-color: #ffffff;
 }
+
+section {
+    font-family: "Bitcount Grid Single", system-ui;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    display: none;
+}
+
+.hasil {
+    font-size: 72px;
+}
+
+.result {
+    font-size: 32px;
+    padding: 20px;
+}
+
+.restart {
+    font-size: 24px;
+    border: none;
+}
