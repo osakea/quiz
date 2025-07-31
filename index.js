@@ -52,7 +52,7 @@ list_quest.push(quest1, quest2, quest3, quest4, quest5, quest6, quest7, quest8, 
 
 let current = 0
 
-let quest_answer = 0
+let quest_answer = 1
 let quest_correct = 0
 
 let main = document.querySelector('main')
@@ -76,6 +76,9 @@ for(let i = 0; i < num.length; i += 1) {
         console.log(current);
         
         if(current >= 14) {
+            let result = document.querySelector('.result')
+            result.innerHTML = `benar ${quest_correct} dari ${quest_answer}`
+
             console.log('hide');
             
             section.style.display = 'flex'
@@ -92,6 +95,8 @@ for(let i = 0; i < num.length; i += 1) {
 
 
 }
+
+
 
 let restart = document.querySelector('.restart')
 
