@@ -67,13 +67,14 @@ for(let i = 0; i < num.length; i += 1) {
             this.style.backgroundColor = 'red'
             setTimeout(() => {
                 this.style.backgroundColor = 'white'
-            }, 500);
+            }, 200);
         }
         list_quest[current].display()
+        console.log(current)
         current ++;
         if(current >= 14) {
             section.style.display = 'flex'
-            main.style.display = 'none'
+            this.style.display = 'none'
         }
         quest_answer ++;
     })
