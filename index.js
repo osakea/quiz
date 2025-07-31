@@ -2,6 +2,8 @@ const question =document.querySelector('.question')
 
 const num = document.querySelectorAll('.num div')
 
+
+
 class Quest{
     constructor(quest, answer, wrong1, wrong2, wrong3, wrong4){
         this.quest = quest;
@@ -58,26 +60,37 @@ let section = document.querySelector('section')
 
 for(let i = 0; i < num.length; i += 1) {
     num[i].addEventListener('click', function() {
-        if(this.innerHTML == list_quest[current].answer){
+        
+        if(this.innerHTML == list_quest[current].answer){ 
             this.style.backgroundColor = 'green'
+            quest_correct ++;
             setTimeout(() => {
                 this.style.backgroundColor = 'white'
             }, 500);
         }else{
             this.style.backgroundColor = 'red'
             setTimeout(() => {
-                this.style.backgroundColor = 'white'
+                this.style.backgroundColor = 'white' 
             }, 200);
         }
-        list_quest[current].display()
-        console.log(current)
-        current ++;
+        console.log(current);
+        
         if(current >= 14) {
+            console.log('hide');
+            
             section.style.display = 'flex'
-            this.style.display = 'none'
+            main.style.display = 'none'
         }
+        current ++; 
         quest_answer ++;
+
+        list_quest[current].display() 
+
+        
+        
     })
+
+
 }
 
 let restart = document.querySelector('.restart')
@@ -87,3 +100,5 @@ restart.addEventListener('click', function() {
     main.style.display = 'flex'
     current = 0
 })
+
+list_quest[0].display()
