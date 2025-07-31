@@ -78,7 +78,8 @@ for(let i = 0; i < num.length; i += 1) {
         if(current >= 14) {
             let result = document.querySelector('.result')
             result.innerHTML = `benar ${quest_correct} dari ${quest_answer}`
-
+            
+            document.cookie = `score=${quest_correct};max-age=10000000`
             console.log('hide');
             
             section.style.display = 'flex'
@@ -105,5 +106,18 @@ restart.addEventListener('click', function() {
     main.style.display = 'flex'
     current = 0
 })
-
+document.cookie = `lain=lain;max-age=10000000`
 list_quest[0].display()
+let cokieSplit = document.cookie.split(';')
+let hight_score = 0;
+cokieSplit.forEach((data)=>{
+    let key = data.split('=')[0]
+    if (key == 'score'){
+        hight_score = data.split('=')[1]
+    }
+    
+})
+
+console.log(hight_score);
+
+
