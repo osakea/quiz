@@ -3,7 +3,7 @@ const question =document.querySelector('.question')
 const num = document.querySelectorAll('.num div')
 
 
-
+// ini nanti nyonba pull
 class Quest{
     constructor(quest, answer, wrong1, wrong2, wrong3, wrong4){
         this.quest = quest;
