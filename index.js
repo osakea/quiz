@@ -121,3 +121,4 @@ cokieSplit.forEach((data)=>{
 console.log(hight_score);
 
 
+
